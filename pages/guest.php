@@ -1,7 +1,3 @@
-<?php
-
-
-?>
 
 <div class="guest-content">
     <div class="gif-block">
