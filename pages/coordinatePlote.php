@@ -4,7 +4,7 @@
         <div><img src="/img/img.png" alt=""></div>
     </div>
     <div class="form-block">
-        <form action="/validation.php" method="post" id="form-lab1">
+        <form action="../validation.php" method="post" id="form-lab1">
             <div>
                 изменение по X:
                 <input type="radio" name="button" value="-4" checked>-4
