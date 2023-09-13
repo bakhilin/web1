@@ -26,3 +26,14 @@ function getPage($page): array
         'Title' => $title
     ];
 }
+
+
+function checkFieldX($r, $x) {
+    $radius = $r / 2;
+    if ($x <= $radius) {
+        return true;
+    }
+
+    return false;
+}
+

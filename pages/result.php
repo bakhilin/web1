@@ -3,7 +3,7 @@
 $CookieKey = "my_cookie_key";
 
 if (isset($_GET['x']))
-    $res[] = [$_GET['x'], $_GET['y'], $_GET['r'], $_GET['time']];
+    $res[] = [$_GET['x'], $_GET['y'], $_GET['r'], $_GET['time'], $_GET['flag']];
 
 (isset($_COOKIE[$CookieKey]) ? $heap = unserialize($_COOKIE[$CookieKey]) : $heap = array());
 if (isset($res)){
@@ -26,6 +26,7 @@ if (isset($_GET['x'])) {
         <th>Y</th>
         <th>R</th>
         <th>time</th>
+        <th>result</th>
     </tr>
 
     <?php foreach ($heap as $item): ?>
@@ -34,6 +35,7 @@ if (isset($_GET['x'])) {
                 <td><?= $item[0][1] ?></td>
                 <td><?= $item[0][2] ?></td>
                 <td><?= $item[0][3] ?></td>
+                <td><?php if($item[0][4]){echo "succes"}else{echo "не попал"} ?></td>
             </tr>
     <?php endforeach; ?>
 </table>
