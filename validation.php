@@ -7,7 +7,11 @@ $X = array(-5,-4,-3,-2,-1,0,1,2,3);
 $Y = array(-5,-4,-3,-2,-1,0,1,2,3,4,5);
 
 
-$flag = checkFieldX($_POST['changeR'],$_POST['button']);
+if(checkFieldX($_POST['changeR'],$_POST['button']) & checkFieldY($_POST['changeR'],$_POST['fieldY'])) {
+    $flag = true;
+} else {
+    $flag = false;
+}
 
 
 if (in_array($_POST['button'], $X)) {

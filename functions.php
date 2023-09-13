@@ -50,3 +50,19 @@ function checkFieldX($r, $x) {
     return false;
 }
 
+function checkFieldY($r, $y) {
+    if ($y < 0) {
+        if($y >= ($r* (-1))) {
+            return true;
+        } else {
+            return false;
+        }
+    } else {
+        if($y <= $r) {
+            return true;
+        } 
+        return false;
+    }
+}
+
+
