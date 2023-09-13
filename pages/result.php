@@ -35,7 +35,14 @@ if (isset($_GET['x'])) {
                 <td><?= $item[0][1] ?></td>
                 <td><?= $item[0][2] ?></td>
                 <td><?= $item[0][3] ?></td>
-                <td><?php if($item[0][4]){echo "succes"}else{echo "не попал"} ?></td>
+                <td><?php 
+                if($item[0][4]){
+                    echo "succes";
+                }
+                    else{
+                        echo "не попал";
+                    } 
+                ?></td>
             </tr>
     <?php endforeach; ?>
 </table>

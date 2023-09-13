@@ -30,10 +30,23 @@ function getPage($page): array
 
 function checkFieldX($r, $x) {
     $radius = $r / 2;
-    if ($x <= $radius) {
-        return true;
-    }
+    if($radius >=0) {
+        if($x >=0 ) {
+            if($x <= $radius) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            $radius = $radius * (-1);
+            if($radius <= $x) {
+                return true;
+            } 
 
+            return false;
+        }
+    } 
+    
     return false;
 }
 
