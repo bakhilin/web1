@@ -14,9 +14,6 @@ html, body {
     text-transform: uppercase;
 }
 
-
-
-
 .wrapper {
     position: relative;
     min-height: 100%;
@@ -25,7 +22,7 @@ html, body {
 .header {
     text-align: center;
     padding: 10px;
-    background-color: blue;
+    background-color: cadetblue;
 }
 
 .content {
@@ -199,3 +196,5 @@ p.note {
 .links li  a {
     color: black;
 }
+
+

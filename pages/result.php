@@ -1,5 +1,7 @@
 <?php
 
+
+
 $CookieKey = "my_cookie_key";
 
 if (isset($_GET['x']))
@@ -37,7 +39,7 @@ if (isset($_GET['x'])) {
                 <td><?= $item[0][3] ?></td>
                 <td><?php 
                 if($item[0][4]){
-                    echo "succes";
+                    echo "попал";
                 }
                     else{
                         echo "не попал";

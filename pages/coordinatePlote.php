@@ -4,18 +4,18 @@
         <div><img src="img/img.png" alt=""></div>
     </div>
     <div class="form-block">
-        <form action="validation.php" method="post" id="form-lab1">
-            <div>
+        <form action="" id="form-lab1">
+        <div>
                 изменение по X:
-                <input type="radio" name="button" value="-4" checked>-4
-                <input type="radio" name="button" value="-3">-3
-                <input type="radio" name="button" value="-2">-2
-                <input type="radio" name="button" value="-1">-1
-                <input type="radio" name="button" value="0">0
-                <input type="radio" name="button" value="1">1
-                <input type="radio" name="button" value="2">2
-                <input type="radio" name="button" value="3">3
-                <input type="radio" name="button" value="4">4
+                <input type="button" name="x" value="-4" class='x' >
+                <input type="button" name="x" value="-3" class='x'>
+                <input type="button" name="x" value="-2" class='x'> 
+                <input type="button" name="x" value="-1" class='x'>
+                <input type="button" name="x" value="0" class='x'>
+                <input type="button" name="x" value="1" class='x'>
+                <input type="button" name="x" value="2" class='x'>
+                <input type="button" name="x" value="3" class='x'>
+                <input type="button" name="x" value="4" class='x'>
             </div>
             <div>
                 <p>
@@ -34,17 +34,18 @@
                     <option value="5">5</option>
                 </select>
             </div>
-            <div>
-                <button type="submit" class="btn" value="Validate">
-                    submit
-                </button>
-            </div>
+            <div> 
+        </div>
         </form>
-    </div>
+
+        <button type="submit" id="submit" class="btn">send</button>
+
 </div>
 
+
 <script>
-    $(document).ready(function () {
+
+$(document).ready(function () {
         $('#form-lab1').validate({
             rules: {
                 fieldY: {
@@ -69,5 +70,41 @@
                 }
             }
         });
+
+
+
+});     
+
+
+$(document).ready(function(){
+ window.x = '';
+ window.changeR = '';
+ window.fieldY = '';
+
+$(".x").click(function() { 
+ window.x = $(this).val();
+}); 
+
+
+
+$("#changeR").click(function() { 
+ window.changeR = $(this).val();
+}); 
+
+$("#submit").click(function() { 
+
+
+    var form = $('<form></form>');
+    $(form).hide().attr('method','post').attr('action',"validation.php");
+
+    var input1 = $('<input type="hidden" />').attr('name',"x").val(window.x);
+    var input2 = $('<input type="hidden" />').attr('name',"changeR").val(window.changeR);
+    var input3 = $('<input type="hidden" />').attr('name',"fieldY").val($("#fieldY").val());
+    $(form).append(input1);
+    $(form).append(input2);
+    $(form).append(input3);
+    $(form).appendTo('body').submit();
     });
+});
+
 </script>

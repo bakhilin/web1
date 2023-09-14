@@ -29,7 +29,7 @@ function getPage($page): array
 
 
 function checkFieldX($r, $x) {
-    $radius = $r / 2;
+    $radius = (int)$r / 2;
     if($radius >=0) {
         if($x >=0 ) {
             if($x <= $radius) {
