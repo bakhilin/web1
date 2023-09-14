@@ -21,8 +21,17 @@ if (in_array($_POST['x'], $X)) {
             $time = date("H:i:s");
             header("Location: index.php?page=3&x={$_POST['x']}&y={$_POST['fieldY']}&r={$_POST['changeR']}&time={$time}&flag={$flag}");
             exit();
+        } else {
+            header("Location: index.php?page=2");
+             exit();
         }
+    } else {
+        header("Location: index.php?page=2");
+        exit();
     }
+} else {
+    header("Location: index.php?page=2");
+    exit();
 }
 
 

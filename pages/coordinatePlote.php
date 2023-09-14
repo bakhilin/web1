@@ -26,7 +26,6 @@
             <div>
                 <label for="changeR">изменение по R:</label>
                 <select name="changeR" id="changeR" required>
-                    <option value=""></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -70,10 +69,9 @@ $(document).ready(function () {
                 }
             }
         });
-
-
-
-});     
+    });
+            
+ 
 
 
 $(document).ready(function(){
