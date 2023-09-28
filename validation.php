@@ -5,6 +5,11 @@ include "functions.php";
 
 //var_dump($_REQUEST);
 
+if (!isset($_POST['x']) or !isset($_POST['changeR']) or !isset($_POST['fieldY'])){
+    header("Location: index.php?page=1");
+    exit();
+}
+
 if (checkFieldX($_POST['changeR'], $_POST['x']) & checkFieldY($_POST['changeR'], $_POST['fieldY'])) {
     $flag = true;
 } else {
