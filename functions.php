@@ -25,17 +25,17 @@ function getPage($page): array
 
 
 function checkFieldX($r, $x) {
-    $radius = (int)$r / 2;
+    $radius = $r / 2;
     if($radius >=0) {
-        if((int)$x >=0 ) {
-            if((int)$x <= $radius) {
+        if($x >=0 ) {
+            if($x <= $radius) {
                 return true;
             } else {
                 return false;
             }
         } else {
             $radius = $radius * (-1);
-            if($radius <= (float)$x) {
+            if($radius <= $x) {
                 return true;
             } 
 
@@ -47,14 +47,14 @@ function checkFieldX($r, $x) {
 }
 
 function checkFieldY($r, $y) {
-    if ((int)$y < 0) {
-        if((int)$y >= ((int)$r* (-1))) {
+    if ($y < 0) {
+        if($y >= ($r* (-1))) {
             return true;
         } else {
             return false;
         }
     } else {
-        if((int)$y <= (int)$r) {
+        if($y <= $r) {
             return true;
         } 
         return false;
