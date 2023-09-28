@@ -5,19 +5,15 @@ function getPage($page): array
 {
     switch ($page) {
         case 1:
-            $fileName = 'guest.php';
-            $title = 'guest';
+            $fileName = 'coordinatePlote.php';
+            $title = 'Home page';
             break;
         case 2:
-            $fileName = 'coordinatePlote.php';
-            $title = 'coordinate Plote';
-            break;
-        case 3:
             $fileName = 'result.php';
             $title = 'Results';
             break;
         default:
-            $fileName = 'guest.php';
+            $fileName = 'coordinatePlote.php';
             $title = 'Home page';
     }
 
@@ -29,7 +25,7 @@ function getPage($page): array
 
 
 function checkFieldX($r, $x) {
-    $radius = (int)$r / 2;
+    $radius = (float)$r / 2;
     if($radius >=0) {
         if($x >=0 ) {
             if($x <= $radius) {
