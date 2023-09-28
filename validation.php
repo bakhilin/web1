@@ -3,11 +3,11 @@
 include "functions.php";
 
 
-var_dump($_REQUEST);
+var_dump($_POST);
 
 //header("Location: index.php?page=1");
 
-if (!isset($_POST['x']) or !isset($_POST['changeR']) or !isset($_POST['fieldY'])){
+if ($_POST['x']==""){
     header("Location: index.php?page=1");
     exit();
 }
@@ -36,6 +36,4 @@ if ($_POST['x'] >= -5 and $_POST['x'] <= 3) {
 } else {
     header("Location: index.php?page=1");
 }
-
-header("Location: index.php?page=1");
 
