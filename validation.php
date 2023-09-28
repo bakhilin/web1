@@ -2,11 +2,8 @@
 
 include "functions.php";
 
-//$R = array(1, 2, 3, 4, 5);
-//$X = array(-5, -4, -3, -2, -1, 0, 1, 2, 3);
-//$Y = array(-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5);
 
-var_dump($_REQUEST);
+//var_dump($_REQUEST);
 
 if (checkFieldX($_POST['changeR'], $_POST['x']) & checkFieldY($_POST['changeR'], $_POST['fieldY'])) {
     $flag = true;
@@ -30,6 +27,6 @@ if ($_POST['x'] >= -5 and $_POST['x'] <= 3) {
 } else {
     header("Location: index.php?page=1");
 }
-exit();
 
+header("Location: index.php?page=1");
 
