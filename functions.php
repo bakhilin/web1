@@ -54,7 +54,7 @@ function checkFieldY($r, $y) {
             return false;
         }
     } else {
-        if((float)$y <= (floatgit )$r) {
+        if((float)$y <= (float)$r) {
             return true;
         } 
         return false;
